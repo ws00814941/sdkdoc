@@ -46,7 +46,7 @@ Android6.0开始部分权限需要动态申请，因此请在入口函数中添�
  YSYSDK.getManager().requestPermissions(context,new PermissionCallback() {
                     @Override
                     public void onPermissionGranted() {
-                    		Log.d(TAG,"权限通过");
+                    	Log.d(TAG,"权限通过");
                     }
 
                     @Override
