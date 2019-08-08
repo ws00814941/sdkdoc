@@ -1,12 +1,15 @@
 奇优免费小说SDK对接文档
 --
-##快速开始
+快速开始
+-----
 
 
-###一、获取AppId和AppSecret
+一、获取AppId和AppSecret
+---------
 暂不支持后台获取，请联系商务获取您的appid和appsecret
 
-###二、导入sdk依赖的包
+二、导入sdk依赖的包
+---------
 1.将下方代码添加到您项目文件的build.gradle中
 
 ```
@@ -26,7 +29,8 @@ dependencies {
 }
 ```
 
-###三、添加权限
+三、添加权限
+---------
 使用sdk需要必要的权限
 ```
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -52,7 +56,8 @@ Android6.0开始部分权限需要动态申请，因此请在入口函数中添�
                 });
 ```
 
-###四、代码混淆
+四、代码混淆
+---------
 请按照下图所示配置代码混淆，确保不要混淆sdk的代码
 ```
 #novelsdk
@@ -61,7 +66,8 @@ Android6.0开始部分权限需要动态申请，因此请在入口函数中添�
 -keep public inteface com.youshuge.novelsdk.** { *; }
 ```
 
-###五、初始化SDK
+五、初始化SDK
+---------
 请在Application类中的onCreate方法中调用以下代码初始化SDK
 ```
   YSYSDK.init(context, new YSYConfig.Builder()
@@ -70,7 +76,8 @@ Android6.0开始部分权限需要动态申请，因此请在入口函数中添�
                 .appSecret("your appsecret")
                 .build());
 ```
-###六、启动SDK
+六、启动SDK
+---------
 请在相应的事件中添加下列代码，启动小说界面
 ```
 Intent intent = new Intent(context,YSYMainActivity.class)
