@@ -25,7 +25,7 @@ allprojects {
 
 ```
 dependencies {
-    implementation 'com.youshuge.ysynovel:ysysdk:1.0.1'
+    implementation 'com.youshuge.ysynovel:ysysdk:1.0.5'
 }
 ```
 
