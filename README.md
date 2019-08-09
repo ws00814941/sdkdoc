@@ -58,7 +58,7 @@ Android6.0开始部分权限需要动态申请，因此请在入口函数中添�
 #novelsdk
 -dontwarn com.youshuge.novelsdk.**
 -keep class com.youshuge.novelsdk.** { *; }
--keep public inteface com.youshuge.novelsdk.** { *; }
+-keep public interface com.youshuge.novelsdk.** { *; }
 ```
 
 #### 五、初始化SDK
