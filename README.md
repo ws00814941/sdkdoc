@@ -22,7 +22,7 @@ allprojects {
 
 ```
 dependencies {
-    implementation 'com.youshuge.ysynovel:ysysdk:1.0.6'
+    implementation 'com.youshuge.ysynovel:ysysdk:1.0.9'
 }
 ```
 
@@ -73,8 +73,7 @@ Android6.0开始部分权限需要动态申请，因此请在入口函数中添�
 #### 六、启动SDK
 请在相应的事件中添加下列代码，启动小说界面
 ```
-Intent intent = new Intent(context,YSYMainActivity.class)
-startActivity(intent);
+  YSYSDK.getManager().enter();
 ```
 
 
