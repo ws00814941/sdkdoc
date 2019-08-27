@@ -24,6 +24,8 @@ allprojects {
 dependencies {
     implementation 'com.youshuge.ysynovel:ysysdk:1.0.9'
 }
+
+//sdk引用了appcompat的依赖版本号为28.0.0 请修改您的appcompat版本，避免重复引用，
 ```
 
 #### 三、添加权限
