@@ -24,12 +24,11 @@ allprojects {
 dependencies {
     implementation 'com.youshuge.ysynovel:ysysdk:1.1.0'
 }
-<font color='#f00'>请将项目的compileSdkVersion，targetSdkVersion改成28</font>
-避免编译时报错
 
 //sdk引用了appcompat的依赖版本号为28.0.0 请修改您的appcompat版本，避免重复引用，
 ```
-
+<font color=#f00>请将项目的compileSdkVersion，targetSdkVersion改成28</font>
+避免编译时报错
 #### 三、添加权限
 使用sdk需要必要的权限
 ```
