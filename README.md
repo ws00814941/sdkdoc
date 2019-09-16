@@ -79,7 +79,49 @@ Android6.0开始部分权限需要动态申请，因此请在入口函数中添�
   YSYSDK.getManager().enter();
 ```
 
+### 阅读激励设置指南
+请联系商务开通阅读激励。
 
+开启阅读激励需要读取手机的imei同时关联app的用户id
+相关代码
+```
+    YSYSDK.getManager().requestPermissions(context, new PermissionCallback() {
+                    @Override
+                    public void onPermissionGranted() {
+                    }
+
+                    @Override
+                    public void onPermissionDenied() {
+                    }
+                });
+    //关联app的用户id
+    YSYSDK.getManager().setUserID("user_id");
+```
+回调接口
+**GET** http://xxx.xx?user_code=1&award_amount=100
+
+|  参数 | 描述 |
+| :-  | :-  |
+| url | 回调奖励金地址（后台填写） |
+| user_code | 用户唯一标识 |
+| award_amount | 奖励金额（后台填写） |
+
+```
+返回成功结果示例： 
+{
+    "code":200,
+    "msg":"成功",
+    "err":""
+}
+返回失败结果示例:
+{
+    "code":-1,
+    "msg":"失败",
+    "err":"用户标识不存在"
+}
+
+```
+**注意返回结果请按给定格式返回，否则用户无法收到奖励**
 
 
 
